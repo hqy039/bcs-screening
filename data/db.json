@@ -1,0 +1,1282 @@
+{
+  "scaleMeta": {
+    "title": "乳腺癌筛查专业量表（三甲医院规则版）",
+    "source": "副本乳腺癌筛查专业量表（三甲医院规则版）.docx",
+    "ruleSource": "副本乳腺癌筛查量表风险计算评分规则.docx",
+    "version": "2026-三甲医院规则版",
+    "evidenceClasses": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "riskLevels": [
+      "F",
+      "DE",
+      "高危",
+      "一般"
+    ],
+    "note": "采用 A-F 六级证据分类 + 风险等级优先级判定（F→DE→A/B 或 C≥2→一般）；BMI 仅作展示，不计入判定。"
+  },
+  "questionnaire": [
+    {
+      "id": "q1",
+      "no": "Q1",
+      "sc": "",
+      "evidenceClass": "",
+      "rule": "",
+      "maxScore": null,
+      "section": "一、疾病确诊状态",
+      "type": "bool",
+      "evidence": "F",
+      "skipRest": true,
+      "q": "您是否已被确诊为乳腺癌或卵巢癌？",
+      "options": [
+        {
+          "text": "是，已确诊",
+          "evidence": "F",
+          "risk": false
+        },
+        {
+          "text": "否，未确诊",
+          "evidence": "",
+          "risk": false
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "no": "Q2",
+      "sc": "",
+      "evidenceClass": "",
+      "rule": "",
+      "maxScore": null,
+      "section": "二、月经史",
+      "type": "bool",
+      "evidence": "B",
+      "skipRest": false,
+      "q": "您首次来月经的年龄是否在 12 周岁以前（早于 12 周岁）？",
+      "options": [
+        {
+          "text": "是，早于 12 周岁",
+          "evidence": "B",
+          "risk": false
+        },
+        {
+          "text": "否，12 周岁及以后",
+          "evidence": "",
+          "risk": false
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "no": "Q3",
+      "sc": "",
+      "evidenceClass": "",
+      "rule": "",
+      "maxScore": null,
+      "section": "二、月经史",
+      "type": "bool",
+      "evidence": "",
+      "skipRest": false,
+      "q": "您是否已经绝经？",
+      "options": [
+        {
+          "text": "是，已绝经",
+          "evidence": "",
+          "risk": false
+        },
+        {
+          "text": "否，未绝经",
+          "evidence": "",
+          "risk": false
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "no": "Q4",
+      "sc": "",
+      "evidenceClass": "",
+      "rule": "",
+      "maxScore": null,
+      "section": "二、月经史",
+      "type": "bool",
+      "evidence": "B",
+      "showIf": {
+        "q": "q3",
+        "in": [
+          0
+        ]
+      },
+      "skipRest": false,
+      "q": "您绝经时的年龄是否在 55 周岁及以上？",
+      "options": [
+        {
+          "text": "是，≥55 周岁",
+          "evidence": "B",
+          "risk": false
+        },
+        {
+          "text": "否，<55 周岁",
+          "evidence": "",
+          "risk": false
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "no": "Q5",
+      "sc": "",
+      "evidenceClass": "",
+      "rule": "",
+      "maxScore": null,
+      "section": "三、生育史",
+      "type": "single",
+      "evidence": "C",
+      "skipRest": false,
+      "q": "您生育第一胎时的年龄属于以下哪种情况？",
+      "options": [
+        {
+          "text": "A. 未生育过",
+          "evidence": "",
+          "risk": false
+        },
+        {
+          "text": "B. 29 周岁及以前",
+          "evidence": "",
+          "risk": false
+        },
+        {
+          "text": "C. 30 周岁及以上",
+          "evidence": "C",
+          "risk": false
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "no": "Q6",
+      "sc": "",
+      "evidenceClass": "",
+      "rule": "",
+      "maxScore": null,
+      "section": "三、生育史",
+      "type": "bool",
+      "evidence": "C",
+      "skipRest": false,
+      "q": "您的怀孕次数与活产次数之差是否达到 2 次及以上（即曾有 2 次及以上流产、胎停或死产）？",
+      "options": [
+        {
+          "text": "是，≥2 次",
+          "evidence": "C",
+          "risk": false
+        },
+        {
+          "text": "否，不足 2 次",
+          "evidence": "",
+          "risk": false
+        },
+        {
+          "text": "未曾怀孕",
+          "evidence": "",
+          "risk": false
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "no": "Q7",
+      "sc": "",
+      "evidenceClass": "",
+      "rule": "",
+      "maxScore": null,
+      "section": "四、家族遗传史",
+      "type": "bool",
+      "evidence": "A",
+      "skipRest": false,
+      "q": "您的母亲、女儿、亲姐妹、表妹或堂妹中，是否有人患乳腺癌或卵巢癌？（与患病年龄无关）",
+      "options": [
+        {
+          "text": "是，有人患病",
+          "evidence": "A",
+          "risk": false
+        },
+        {
+          "text": "否，无人患病",
+          "evidence": "",
+          "risk": false
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "no": "Q8",
+      "sc": "",
+      "evidenceClass": "",
+      "rule": "",
+      "maxScore": null,
+      "section": "四、家族遗传史",
+      "type": "bool",
+      "evidence": "A",
+      "skipRest": false,
+      "q": "您的姑姑、姨、祖母或外祖母中，是否有两人及以上在 50 周岁及以前患乳腺癌或卵巢癌？",
+      "options": [
+        {
+          "text": "是，两人及以上且≤50岁",
+          "evidence": "A",
+          "risk": false
+        },
+        {
+          "text": "否，或仅一人/患病>50岁",
+          "evidence": "",
+          "risk": false
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "no": "Q9",
+      "sc": "",
+      "evidenceClass": "",
+      "rule": "",
+      "maxScore": null,
+      "section": "四、家族遗传史",
+      "type": "bool",
+      "evidence": "A",
+      "skipRest": false,
+      "q": "您是否经基因检测确认携带 BRCA1/2 致病性突变？",
+      "options": [
+        {
+          "text": "是，确认携带",
+          "evidence": "A",
+          "risk": false
+        },
+        {
+          "text": "否，未携带/未检测",
+          "evidence": "",
+          "risk": false
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "no": "Q10",
+      "sc": "",
+      "evidenceClass": "",
+      "rule": "",
+      "maxScore": null,
+      "section": "五、激素药物与乳腺病史",
+      "type": "bool",
+      "evidence": "",
+      "skipRest": false,
+      "q": "您是否接受过雌激素替代治疗？",
+      "options": [
+        {
+          "text": "是，接受过",
+          "evidence": "",
+          "risk": false
+        },
+        {
+          "text": "否，未接受",
+          "evidence": "",
+          "risk": false
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "no": "Q11",
+      "sc": "",
+      "evidenceClass": "",
+      "rule": "",
+      "maxScore": null,
+      "section": "五、激素药物与乳腺病史",
+      "type": "bool",
+      "evidence": "",
+      "showIf": {
+        "q": "q10",
+        "in": [
+          0
+        ]
+      },
+      "skipRest": false,
+      "q": "治疗期间是否同时使用孕激素替代治疗？",
+      "options": [
+        {
+          "text": "是，同时使用",
+          "evidence": "",
+          "risk": false
+        },
+        {
+          "text": "否，未同时使用",
+          "evidence": "",
+          "risk": false
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "no": "Q12",
+      "sc": "",
+      "evidenceClass": "",
+      "rule": "",
+      "maxScore": null,
+      "section": "五、激素药物与乳腺病史",
+      "type": "single",
+      "evidence": "",
+      "showIf": {
+        "q": "q10",
+        "in": [
+          0
+        ]
+      },
+      "skipRest": false,
+      "q": "激素替代治疗的使用时间为？",
+      "options": [
+        {
+          "text": "A. 半年内",
+          "evidence": "",
+          "risk": false
+        },
+        {
+          "text": "B. 半年-2 年",
+          "evidence": "",
+          "risk": false
+        },
+        {
+          "text": "C. 2 年以上",
+          "evidence": "",
+          "risk": false
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "no": "Q13",
+      "sc": "",
+      "evidenceClass": "",
+      "rule": "",
+      "maxScore": null,
+      "section": "五、激素药物与乳腺病史",
+      "type": "bool",
+      "evidence": "B",
+      "skipRest": false,
+      "q": "您是否有乳腺手术史？",
+      "options": [
+        {
+          "text": "是，有手术史",
+          "evidence": "B",
+          "risk": false
+        },
+        {
+          "text": "否，无手术史",
+          "evidence": "",
+          "risk": false
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "no": "Q14",
+      "sc": "",
+      "evidenceClass": "",
+      "rule": "",
+      "maxScore": null,
+      "section": "五、激素药物与乳腺病史",
+      "type": "bool",
+      "evidence": "A",
+      "skipRest": false,
+      "q": "您是否接受过注射式隆胸手术？",
+      "options": [
+        {
+          "text": "是，接受过",
+          "evidence": "A",
+          "risk": false
+        },
+        {
+          "text": "否，未接受",
+          "evidence": "",
+          "risk": false
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "no": "Q15",
+      "sc": "",
+      "evidenceClass": "",
+      "rule": "",
+      "maxScore": null,
+      "section": "六、乳腺临床症状与体征",
+      "type": "bool",
+      "evidence": "D",
+      "skipRest": false,
+      "q": "您是否在非哺乳期出现乳头溢液？",
+      "options": [
+        {
+          "text": "是，有溢液",
+          "evidence": "D",
+          "risk": false
+        },
+        {
+          "text": "否，无溢液",
+          "evidence": "",
+          "risk": false
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "no": "Q16",
+      "sc": "",
+      "evidenceClass": "",
+      "rule": "",
+      "maxScore": null,
+      "section": "六、乳腺临床症状与体征",
+      "type": "bool",
+      "evidence": "E",
+      "showIf": {
+        "q": "q15",
+        "in": [
+          0
+        ]
+      },
+      "skipRest": false,
+      "q": "乳头溢液是否为血性（呈红色、暗红色或含血丝）？",
+      "options": [
+        {
+          "text": "是，血性溢液",
+          "evidence": "E",
+          "risk": false
+        },
+        {
+          "text": "否，非血性",
+          "evidence": "",
+          "risk": false
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "no": "Q17",
+      "sc": "",
+      "evidenceClass": "",
+      "rule": "",
+      "maxScore": null,
+      "section": "六、乳腺临床症状与体征",
+      "type": "single",
+      "evidence": "D",
+      "skipRest": false,
+      "q": "您近期乳腺影像检查（彩超、钼靶或 MRI）报告中的 BI-RADS 分级为？",
+      "options": [
+        {
+          "text": "A. 3 类或 4a 类",
+          "evidence": "D",
+          "risk": false
+        },
+        {
+          "text": "B. 4b 类或 4c 类",
+          "evidence": "E",
+          "risk": false
+        },
+        {
+          "text": "C. 未做过检查，或 0-2 类",
+          "evidence": "",
+          "risk": false
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "no": "Q18",
+      "sc": "",
+      "evidenceClass": "",
+      "rule": "",
+      "maxScore": null,
+      "section": "六、乳腺临床症状与体征",
+      "type": "bool",
+      "evidence": "B",
+      "skipRest": false,
+      "q": "您的乳腺钼靶检查是否提示乳腺致密（腺体密集）？",
+      "options": [
+        {
+          "text": "是，提示致密",
+          "evidence": "B",
+          "risk": false
+        },
+        {
+          "text": "否，未提示",
+          "evidence": "",
+          "risk": false
+        },
+        {
+          "text": "未做过乳腺钼靶检查",
+          "evidence": "",
+          "risk": false
+        }
+      ]
+    }
+  ],
+  "questionnaireDraft": null,
+  "riskCategories": [
+    {
+      "key": "F",
+      "label": "确诊疾病人群",
+      "color": "#b30000",
+      "headline": "您已确诊乳腺癌或卵巢癌",
+      "detail": "请到乳腺专科 / 肿瘤专科医院继续诊治，遵循主管医生的治疗与随访方案。"
+    },
+    {
+      "key": "DE",
+      "label": "乳腺可能有疾病",
+      "color": "#e8590c",
+      "headline": "存在可疑或高度可疑的乳腺异常表现",
+      "detail": "1. 关注乳腺健康，定期更新数据；2. 日常自我乳腺体检；3. 在专科医生建议下检查乳腺彩超；4. 在专科医生建议下检查乳腺钼靶；5. 在专科医生建议下检查乳腺 MRI；6. 近期就诊。"
+    },
+    {
+      "key": "高危",
+      "label": "乳腺癌高危风险人群",
+      "color": "#f08c00",
+      "headline": "多项因素提示乳腺癌风险偏高",
+      "detail": "1. 关注乳腺健康，定期更新数据；2. 日常自我乳腺体检；3. 1 年 / 次检查乳腺彩超；4. 1 年 / 次检查乳腺钼靶。"
+    },
+    {
+      "key": "一般",
+      "label": "乳腺癌一般风险人群",
+      "color": "#2f9e44",
+      "headline": "目前未见明显高危信号",
+      "detail": "1. 关注乳腺健康，定期更新数据；2. 日常自我乳腺体检；3. 1–2 年 / 次检查乳腺彩超；4. 1–2 年 / 次检查乳腺钼靶。"
+    }
+  ],
+  "riskCategoriesDraft": null,
+  "riskConfig": {
+    "cMinCount": 2
+  },
+  "riskConfigDraft": null,
+  "hospitals": [
+    {
+      "id": "h3",
+      "name": "中山大学肿瘤防治中心",
+      "city": "广州",
+      "level": "三甲 · 专科医院",
+      "department": "乳腺科 / 肿瘤内科",
+      "address": "广州市越秀区东风东路 651 号",
+      "phone": "020-87343088",
+      "lat": 23.139,
+      "lng": 113.307,
+      "note": "华南地区权威肿瘤专科医院，乳腺诊疗实力突出。"
+    },
+    {
+      "id": "h7",
+      "name": "中山大学附属第一医院",
+      "city": "广州",
+      "level": "三甲 · 综合医院",
+      "department": "乳腺外科",
+      "address": "广州市越秀区中山二路 58 号",
+      "phone": "020-87755766",
+      "note": "综合实力强，乳腺外科为广东省重点专科。"
+    },
+    {
+      "id": "h8",
+      "name": "南方医科大学南方医院",
+      "city": "广州",
+      "level": "三甲 · 综合医院",
+      "department": "乳腺中心",
+      "address": "广州市白云区广州大道北 1838 号",
+      "phone": "020-61641114",
+      "note": "乳腺疾病诊疗中心，设备与技术齐全。"
+    },
+    {
+      "id": "h1",
+      "name": "中国医学科学院肿瘤医院",
+      "city": "北京",
+      "level": "三甲 · 国家级肿瘤中心",
+      "department": "乳腺外科 / 肿瘤内科",
+      "address": "北京市朝阳区潘家园南里 17 号",
+      "phone": "010-87788899",
+      "lat": 39.8772,
+      "lng": 116.4656,
+      "note": "国家癌症中心附属医院，乳腺癌诊疗权威，疑难病例首选。"
+    },
+    {
+      "id": "h2",
+      "name": "复旦大学附属肿瘤医院",
+      "city": "上海",
+      "level": "三甲 · 专科医院",
+      "department": "乳腺外科 / 放疗科",
+      "address": "上海市徐汇区东安路 270 号",
+      "phone": "021-64175590",
+      "lat": 31.197,
+      "lng": 121.445,
+      "note": "华东地区乳腺肿瘤诊疗中心，MDT 多学科会诊成熟。"
+    },
+    {
+      "id": "h4",
+      "name": "天津医科大学肿瘤医院",
+      "city": "天津",
+      "level": "三甲 · 专科医院",
+      "department": "乳腺外科",
+      "address": "天津市河西区体院北环湖西路",
+      "phone": "022-23340123",
+      "lat": 39.095,
+      "lng": 117.21,
+      "note": "我国最早成立的肿瘤专科医院之一，乳腺外科历史悠久。"
+    },
+    {
+      "id": "h5",
+      "name": "浙江省肿瘤医院",
+      "city": "杭州",
+      "level": "三甲 · 专科医院",
+      "department": "乳腺外科",
+      "address": "浙江省杭州市拱墅区半山东路 1 号",
+      "phone": "0571-88122222",
+      "lat": 30.315,
+      "lng": 120.225,
+      "note": "浙江省肿瘤诊疗龙头，乳腺疾病筛查与诊治齐全。"
+    },
+    {
+      "id": "h6",
+      "name": "四川省肿瘤医院",
+      "city": "成都",
+      "level": "三甲 · 专科医院",
+      "department": "乳腺外科 / 肿瘤内科",
+      "address": "四川省成都市武侯区人民南路四段 55 号",
+      "phone": "028-85420110",
+      "lat": 30.66,
+      "lng": 104.12,
+      "note": "西南地区重要肿瘤防治中心，乳腺专科完善。"
+    }
+  ],
+  "articles": {
+    "science": [
+      {
+        "id": "s1",
+        "type": "science",
+        "title": "认识乳腺癌：它到底是什么？",
+        "tag": "基础",
+        "summary": "乳腺癌是发生在乳腺腺上皮组织的恶性肿瘤，是女性最常见的癌症之一。",
+        "content": "乳腺癌是发生在乳腺腺上皮组织的恶性肿瘤，也是全球女性发病率最高的癌症之一。它并非单一疾病，而是一组生物学行为与预后差异很大的异质性疾病。乳腺由导管、小叶以及周围的脂肪与结缔组织构成，绝大多数乳腺癌起源于导管或小叶的上皮细胞，逐渐突破基底膜向周围组织浸润，并可能通过淋巴和血液转移到腋窝淋巴结、骨骼、肺、肝、脑等部位。\n\n从分型上看，按病理可分为非浸润性（原位癌，如导管原位癌）与浸润性癌，其中浸润性导管癌最为常见。按分子分型，医生会根据雌激素受体（ER）、孕激素受体（PR）、人表皮生长因子受体 2（HER2）以及增殖指数（Ki-67）将肿瘤分为 Luminal A、Luminal B、HER2 阳性、三阴性等亚型，不同亚型的复发风险与治疗策略差异显著。\n\n值得庆幸的是，随着人群筛查意识提升、影像技术普及以及手术、化疗、放疗、内分泌与靶向治疗的综合进步，早期乳腺癌的五年生存率已大幅提高，很多患者在规范治疗后可以长期生存甚至达到临床治愈。乳腺癌的预后与发现时机密切相关：局限在乳房内的早期病灶，治疗效果远好于已经发生远处转移的晚期肿瘤。\n\n因此，了解乳腺癌的基本知识、掌握规范的乳房自查方法、并按照自身风险等级定期接受超声或钼靶筛查，是每一位女性保护自己的重要一步。乳腺癌可防、可筛、可治，关键就在于一个「早」字——早了解、早发现、早治疗。"
+      },
+      {
+        "id": "s2",
+        "type": "science",
+        "title": "乳腺癌的早期信号有哪些？",
+        "tag": "预警",
+        "summary": "无痛性肿块、乳头溢液、皮肤橘皮样变、乳头内陷都可能是信号。",
+        "content": "乳腺癌起病隐匿，早期往往不痛不痒，正因如此，很多女性等到明显不适才就诊，已错过最佳时机。了解早期信号，有助于在「还能治、好治」的阶段发现问题。\n\n第一，无痛性肿块。这是最常见也最该警惕的表现：在乳房内摸到质地偏硬、边界不清、活动度差的肿块，且多数不伴疼痛。自检或偶然发现后应尽快就医。第二，乳头溢液。非哺乳期出现单侧、单孔的血性、咖啡色或浆液性溢液，尤其自发流出时，需排查导管内病变。第三，皮肤改变。乳房皮肤出现「酒窝征」（肿瘤牵拉 Cooper 韧带）、「橘皮样」改变（淋巴回流受阻致毛孔凹陷），或局部红肿增厚，都可能是进展信号。\n\n第四，乳头或乳晕改变。乳头无故内陷、偏斜、回缩，或乳晕皮肤瘙痒、脱屑、糜烂，尤其在湿疹样改变久治不愈时，要警惕乳腺 Paget 病。第五，腋窝肿块。腋窝摸到肿大淋巴结，可能是乳腺癌转移的首发表现。第六，乳房大小、形状不对称或整体质地改变，也值得留意。\n\n需要强调：这些信号并不等于一定患癌，良性疾病（如增生、纤维腺瘤、炎症）也可出现类似表现；但它们是「该去医院」的明确提醒。自检的意义不在于自己下诊断，而在于发现「新出现、持续存在」的异常。一旦发现上述任一变化，请尽快到乳腺专科就诊，通过超声、钼靶或穿刺活检明确诊断，切勿因「不痛」而拖延。"
+      },
+      {
+        "id": "s3",
+        "type": "science",
+        "title": "哪些女性属于高危人群？",
+        "tag": "风险",
+        "summary": "有家族史、遗传突变、不典型增生或胸部放疗史者风险更高。",
+        "content": "乳腺癌的风险由遗传、生理与生活方式共同决定。了解自己是否属于高危人群，能帮助决定何时开始、以及如何加强筛查。\n\n不可改变的因素包括：年龄增长（风险随年龄上升，中国女性发病高峰在 45–54 岁）；有乳腺癌家族史，尤其是一级亲属（母亲、姐妹、女儿）患病，或携带 BRCA1/BRCA2 等致病基因突变；既往有乳腺不典型增生或原位癌病史；月经初潮早（12 岁前）或绝经晚（55 岁后），使乳腺长期暴露于雌激素；未婚、未育或首次生育年龄较晚（35 岁后）；曾接受胸部放射线照射（如淋巴瘤放疗史）。\n\n相对可控的因素包括：长期口服避孕药或绝经后激素替代治疗（尤其是联合雌激素与孕激素、使用超过 5 年）；肥胖与脂肪摄入过多（绝经后女性脂肪组织可转化雌激素）；缺乏运动、长期饮酒、吸烟；以及精神压力大、作息不规律等。\n\n具备以下情况之一，通常被视为高危人群，建议提前并加密筛查：明确 BRCA 突变或一级亲属有早发乳腺癌；既往病理证实不典型增生或原位癌；胸部放疗史；或经专业模型评估为高风险者。高危人群一般可在 40 岁前开始，每年一次乳腺超声，并视情况联合钼靶或乳腺 MRI。\n\n需要提醒的是，多数乳腺癌发生在「没有家族史」的普通女性身上，所以即便不属于高危，也不应忽视定期筛查。风险的高低只是决定筛查起点与频率，而不是「查不查」的理由。"
+      },
+      {
+        "id": "s4",
+        "type": "science",
+        "title": "乳腺自查的最佳时间与方法",
+        "tag": "自查",
+        "summary": "绝经前女性建议月经干净后 7–14 天自查，每月一次。",
+        "content": "规律的乳房自查能帮助女性熟悉自己乳房的正常状态，从而在异常出现时更早察觉。但需要明确：自查不能替代医学筛查，它只是「了解自己」的第一道关口。\n\n最佳时间：对仍有月经的女性，建议在每次月经结束后 7–10 天进行，此时雌激素水平低、乳房松软胀痛最轻，最容易发现异常；已绝经的女性可固定每月某一天（如生日当天）自查，便于坚持。\n\n方法可概括为「看、触、挤」三步。看：面对镜子，双臂自然下垂，再举过头顶，观察双侧乳房外形、大小是否对称，皮肤有无凹陷、红肿、橘皮样改变，乳头有无内陷或偏斜。触：仰卧或站立，手指并拢用指腹以画圈方式从外上象限开始，依次滑过外下、内下、内上，最后包括乳头乳晕与腋窝，感受有无肿块、增厚或压痛，注意力度适中、覆盖全面。挤：轻压乳头，观察有无自发性溢液，尤其血性、单侧单孔溢液。\n\n自查时的几个要点：在光线充足处进行；不要用力抓捏（易把正常腺体误认为肿块）；两侧对比着摸；发现「新出现且持续存在」的异常才需重视，一过性的经前胀痛多与增生相关。\n\n需要强调的是，自查的发现不能代替医生的判断。若摸到可疑肿块、出现乳头溢液或皮肤改变，应尽快到乳腺专科就诊，通过超声、钼靶或穿刺活检明确性质，切勿因「不痛不痒」而拖延观察。把自查养成习惯，配合定期医学筛查，才是对自己负责的做法。"
+      },
+      {
+        "id": "s5",
+        "type": "science",
+        "title": "超声、钼靶、MRI 怎么选？",
+        "tag": "检查",
+        "summary": "年轻 / 致密乳腺首选超声；40 岁以上推荐钼靶；高危可加 MRI。",
+        "content": "面对乳腺超声、钼靶（乳腺 X 线摄影）和乳腺 MRI，很多女性不知如何选。三者原理不同、各有擅长，合理组合才能既查得准又避免过度检查。\n\n乳腺超声：利用声波成像，无辐射、价格低、操作便捷，对致密型乳腺中的肿块分辨力强，能区分囊性与实性，并评估血流与淋巴结。它适合各年龄段，尤其是 40 岁以下、孕期、哺乳期女性。缺点是微小钙化的检出不如钼靶，且依赖操作者经验。\n\n钼靶（X 线）：对微钙化高度敏感，是发现早期、无症状导管原位癌的关键手段，也是 40 岁以上女性筛查的「金标准」之一。缺点是有少量辐射（剂量很低、可接受），对致密乳腺的肿块显示略逊，检查时有压迫不适。一般建议 40 岁起每 1–2 年一次，具体遵医嘱。\n\n乳腺 MRI：软组织分辨率最高、无辐射，对多灶、多中心病变与植入假体评估敏感，常用于高危人群筛查补充、术前分期与疗效评估。缺点是费用高、特异性相对低，易出现「假阳性」导致不必要的穿刺，且检查时间长、有禁忌（如某些金属植入物、幽闭恐惧）。\n\n如何选？普通风险 40 岁以下多以超声为主；40 岁以上通常采用「超声 + 钼靶」联合；高危人群（如 BRCA 突变、强家族史）可在上述基础上加做 MRI；触及肿块但超声阴性、或需术前精确定位时，由医生决定加做相应检查。请记住：没有「最好」的单项检查，只有「最适合你」的组合，听专科医生建议最稳妥。"
+      },
+      {
+        "id": "s6",
+        "type": "science",
+        "title": "乳腺癌常用的治疗手段",
+        "tag": "治疗",
+        "summary": "手术、化疗、放疗、内分泌治疗、靶向治疗多手段综合。",
+        "content": "乳腺癌的治疗早已不是「一切了之」，而是依据分期、分子分型与患者意愿制定的个体化综合方案。常见手段包括手术、放疗、化疗、内分泌治疗与靶向治疗，往往多管齐下。\n\n手术是核心。保乳手术在肿瘤较小、位置允许时，可切除病灶并保留乳房，术后需配合放疗；乳房全切适用于多发病灶、保乳条件不足或患者偏好，并可同期或延期进行乳房重建。腋窝处理从传统的淋巴结清扫，逐步转向前哨淋巴结活检，以减少上肢水肿等并发症。\n\n放疗用高能射线杀灭残留癌细胞，常用于保乳术后或局部晚期病例，能显著降低局部复发。化疗通过药物杀灭全身潜在转移细胞，适用于淋巴结阳性、三阴性、HER2 阳性等高危人群，可在术前（新辅助）缩小肿瘤、术后（辅助）清除残余。\n\n内分泌治疗针对激素受体阳性（ER/PR+）的肿瘤，通过抑制雌激素发挥作用，需持续 5–10 年，是把「慢病」长期控制的关键。靶向治疗以 HER2 阳性为靶点的抗体药物，大幅改善了该类患者预后。三阴性乳腺癌目前以化疗为主，免疫与抗体药物偶联物（ADC）等新疗法正在改变格局。\n\n治疗的副反应（脱发、恶心、乏力、骨痛等）因人而异，多数可防可控。保持营养、适度运动、规律随访与心理支持，对康复同样重要。治疗方案请务必与乳腺内科、外科、放疗科多学科团队充分沟通，共同决定最合适自己的路径。"
+      }
+    ],
+    "news": [
+      {
+        "id": "n1",
+        "type": "news",
+        "title": "《中国抗癌协会乳腺癌诊治指南与规范（2026 年版）》发布",
+        "source": "中国癌症杂志",
+        "date": "2026-01",
+        "summary": "一般风险女性筛查起始年龄定为 40 岁，高危人群可提前至 40 岁前。",
+        "content": "2026 年版《中国抗癌协会乳腺癌诊治指南与规范》在 2024 版基础上更新发布，吸纳了近年诊断分类新理念与精准治疗新工具，是指导国内乳腺癌诊疗的重要参考。\n\n在筛查方面，指南明确一般风险女性的筛查起始年龄定为 40 岁，并建议结合超声与钼靶；高危人群（如 BRCA 突变、强家族史、胸部放疗史）可提前至 40 岁前开始，每年一次乳腺超声，并视情况联合钼靶或乳腺 MRI。指南同时强调，筛查应是「个体化」的，需结合密度、病史与可及资源。\n\n在诊断层面，新版进一步规范了影像引导穿刺活检路径，推动微创与病理分子检测结合，使「是哪种类型、该用什么药」在术前就更清晰。治疗上，指南细化了 Luminal、HER2 阳性、三阴性各亚型的辅助与新辅助策略，强化了多学科讨论（MDT）在局部晚期与复发转移病例中的地位。\n\n对于年轻患者，指南提示应在治疗前关注生育力保护与卵巢功能的保留，并将心理支持纳入全程管理。康复随访部分，则突出了长期内分泌治疗的依从性、骨健康与心血管风险的监测。\n\n总体而言，2026 版指南传递出一个清晰信号：乳腺癌诊疗正从「经验驱动」走向「证据与精准驱动」，更早筛查、更准分型、更个体化治疗，最终目的是让更多患者既活得长、也活得好。各地医疗机构将据此更新本院流程，公众也应借机了解自身风险、按时筛查。"
+      },
+      {
+        "id": "n2",
+        "type": "news",
+        "title": "《中国年轻乳腺癌诊疗专家共识（2026 版）》正式发布",
+        "source": "医脉通 / 中华医学杂志",
+        "date": "2026-07",
+        "summary": "将 ≤35 岁定义为“极年轻乳腺癌”，强调筛查关口前移与全生命周期管理。",
+        "content": "《中国年轻乳腺癌诊疗专家共识（2026 版）》正式发布，聚焦 40 岁及以下年轻患者的特殊挑战。年轻乳腺癌虽占比相对低于欧美，但侵袭性更强、预后更需关注，且在生育、遗传与心理层面有独特诉求。\n\n共识指出，年轻患者更常见 BRCA 突变与三阴性亚型，确诊时应常规进行遗传咨询与基因检测，以指导亲属筛查与自身治疗决策。在治疗策略上，共识强调多学科协作：对可手术者权衡保乳与重建，对需化疗者重视卵巢功能的保护，避免过早绝经影响远期健康。\n\n生育问题是年轻群体最关切的话题之一。共识建议，有生育意愿者应在开始化疗或放疗前完成生育力保存评估（如卵子、胚胎或卵巢组织冻存），并在病情稳定后由多学科团队与生殖专科共同制定妊娠时机。并非所有患者都需长期避孕，关键是「在控瘤安全的前提下，给生育以空间」。\n\n心理与社会支持同样被写入共识：年轻患者面临婚恋、职场与自我形象的多重压力，规范化心理筛查与干预应贯穿全程。此外，共识呼吁加强随访体系，关注长期生存者的骨密度、心血管与内分泌健康。\n\n该共识的发布，意味着国内对年轻乳腺癌的诊疗从「照搬成人方案」转向「量身定制」，在治愈肿瘤的同时，尽力守护患者作为「完整的人」的生活质量与未来可能。"
+      },
+      {
+        "id": "n3",
+        "type": "news",
+        "title": "2026 CSCO 指南会聚焦年轻乳腺癌诊疗中国方案",
+        "source": "CCMTV 肿瘤频道",
+        "date": "2026-04",
+        "summary": "刘强教授解读：年轻女性应以乳腺超声为筛查核心，减少不必要辐射。",
+        "content": "2026 年 CSCO（中国临床肿瘤学会）指南大会聚焦年轻乳腺癌诊疗的中国方案，多位专家围绕流行病学、分子特征与可及治疗展开讨论，为本土实践提供方向。\n\n会议强调，中国年轻乳腺癌具有发病相对年轻化、确诊时分期偏晚、BRCA 突变比例较高的特点，因此不能简单套用西方数据。在筛查上，应更积极识别高危个体，推动家族聚集病例的基因检测与亲属级联筛查；在诊断上，利用病理与分子分型实现「精准分类」，让治疗更有针对性。\n\n治疗环节，大会展示了新辅助化疗联合靶向使肿瘤降期、争取保乳与保腋窝的中国经验，以及 ADC 类药物、免疫治疗在三阴性乳腺癌中的可及进展。专家一致认为，年轻患者应在控瘤的同时重视生育力保护与卵巢功能保护，把「活得长」与「活得好」放在同等位置。\n\n真实世界数据分享成为亮点：多家中心汇报了长期随访中内分泌治疗依从性、骨与心血管安全管理的方法，凸显「全程管理」的重要性。大会还呼吁建立更完善的年轻乳腺癌登记与随访网络，用中国人群自己的证据反哺指南。\n\n总体而言，CSCO 会议释放出明确信号——年轻乳腺癌的诊疗正在形成兼顾疗效、生育与生活质量的中国路径。对公众而言，这场专业讨论的落地，意味着更规范、更个体化的服务将逐步惠及更多年轻患者。"
+      },
+      {
+        "id": "n4",
+        "type": "news",
+        "title": "重视乳腺癌超声筛查：守护乳腺健康的“火眼金睛”",
+        "source": "科普中国",
+        "date": "2026-03",
+        "summary": "超声安全无辐射、对致密乳腺敏感，已成为我国女性筛查首选手段之一。",
+        "content": "「重视乳腺癌超声筛查：守护乳腺健康的火眼金睛」——这是多家机构在筛查科普中反复强调的一句话。作为无辐射、便捷、对肿块敏感的检查，超声在乳腺健康管理中扮演着不可替代的角色。\n\n超声利用高频声波成像，能清晰显示乳腺腺体结构，特别适合致密型乳腺（中国女性多见）中的实性肿块与囊肿鉴别，并评估血流、边界与淋巴结。对 40 岁以下女性、孕期及哺乳期，它通常是首选的影像检查；对 40 岁以上人群，则与钼靶互补，弥补后者在致密腺体中的不足。\n\n科普中常被提醒的要点：一是「无症状也要查」，筛查的意义在于发现还没长成、还没感觉的早期病灶；二是「按风险定频率」，一般风险人群随年龄进入联合筛查，高危人群应更早、更密；三是「异常别慌也别拖」，超声发现的结节多数为良性，但 BI-RADS 分类较高或形态可疑时，须遵医嘱进一步穿刺或短期复查。\n\n超声的局限也要知晓：它对微小钙化的敏感性不如钼靶，且结果受操作者经验影响，因此不可完全替代钼靶或医生触诊。把它理解为「第一道火眼金睛」更为贴切——发现问题、提示风险，再交由多学科手段确认。\n\n归根结底，超声筛查的价值在于「早」：越早看见，越多选择。把超声纳入自己的年度健康清单，配合自查与医生建议，是对乳腺最实在的守护。"
+      }
+    ]
+  },
+  "tutorials": {
+    "steps": [
+      {
+        "id": "t1",
+        "type": "mirror",
+        "title": "第一步 · 视诊（对着镜子）",
+        "desc": "看大小、形状、皮肤颜色、乳头。检查时候放松，抬手，叉腰。",
+        "image": "/uploads/tutmt6wfi7nm4w9.jpg"
+      },
+      {
+        "id": "t2",
+        "type": "lie",
+        "title": "第二步 · 触诊",
+        "desc": "摸腋窝淋巴结，看是否有肿块，按压是否有痛感。",
+        "image": "/uploads/tutmt6wb43cur9n.jpg"
+      },
+      {
+        "id": "t3",
+        "type": "stand",
+        "title": "第三步 · 乳头触诊",
+        "desc": "挤压乳头看有无溢液。",
+        "image": "/uploads/tutmt6wbfok6bk1.png"
+      },
+      {
+        "id": "t4",
+        "type": "armpit",
+        "title": "第四步 · 检查（若发现以下情况请及时就医）",
+        "desc": "皮肤增厚或溃烂。乳房或乳头有凹陷。",
+        "image": "/uploads/tutmt6wblt8jxwi.jpg"
+      },
+      {
+        "id": "tmt6rk2gwmwkk",
+        "type": "custom",
+        "title": "第五步 · 检查（若发现以下情况请及时就医）",
+        "desc": "乳房出现发红发热情况，或者肿大导致的不对称。",
+        "image": "/uploads/tutmt6wbqfm9yqj.jpg"
+      },
+      {
+        "id": "tmt6rk2gw4c40",
+        "type": "custom",
+        "title": "第六步 · 检查（若发现以下情况请及时就医）",
+        "desc": "乳房出现肿块或乳头有溢液。",
+        "image": "/uploads/tutmt6wbwm2nz2u.jpg"
+      },
+      {
+        "id": "tmt6rk2gwhjo9",
+        "type": "custom",
+        "title": "第七步 · 检查（若发现以下情况请及时就医）",
+        "desc": "腋窝，锁骨上出现淋巴结肿大或疼痛不适。",
+        "image": "/uploads/tutmt6wc2oa5v3j.jpg"
+      }
+    ]
+  },
+  "submissions": [
+    {
+      "id": "submt86101z3f1v",
+      "uid": "umt85yy9wsgnsv",
+      "name": "匿名用户",
+      "age": "60",
+      "basicInfo": {
+        "age": "60",
+        "height": "166",
+        "weight": "45",
+        "bmi": "16.3"
+      },
+      "answers": {
+        "q1": 1,
+        "q2": 1,
+        "q3": 0,
+        "q4": 1,
+        "q5": 0,
+        "q6": 2,
+        "q7": 1,
+        "q8": 1,
+        "q9": 1,
+        "q10": 1,
+        "q13": 1,
+        "q14": 1,
+        "q15": 1,
+        "q17": 2,
+        "q18": 2
+      },
+      "score": 0,
+      "levelKey": "一般",
+      "level": "乳腺癌一般风险人群",
+      "riskColor": "#2f9e44",
+      "triggered": [],
+      "date": "2026-08-25T04:29:11.688Z"
+    },
+    {
+      "id": "submt6xg33ivtlo",
+      "uid": "umt40xuc1l28ss",
+      "name": "测试",
+      "age": "36",
+      "basicInfo": {
+        "age": "36",
+        "height": "162",
+        "weight": "55",
+        "bmi": "21"
+      },
+      "answers": {
+        "q1": 1,
+        "q2": 1,
+        "q3": 1,
+        "q5": 0,
+        "q6": 2,
+        "q7": 1,
+        "q8": 1,
+        "q9": 1,
+        "q10": 1,
+        "q13": 0,
+        "q14": 1,
+        "q15": 1,
+        "q17": 2,
+        "q18": 1
+      },
+      "score": 1,
+      "levelKey": "高危",
+      "level": "乳腺癌高危风险人群",
+      "riskColor": "#f08c00",
+      "triggered": [
+        "B"
+      ],
+      "date": "2026-08-24T07:41:12.750Z"
+    },
+    {
+      "id": "submt6w2hzzcwd3",
+      "uid": "umt40xuc1l28ss",
+      "name": "测试",
+      "age": "36",
+      "basicInfo": {
+        "age": "36",
+        "height": "162",
+        "weight": "33",
+        "bmi": "12.6"
+      },
+      "answers": {
+        "q1": 1,
+        "q2": 1,
+        "q3": 0,
+        "q4": 1,
+        "q5": 1,
+        "q6": 0,
+        "q7": 1,
+        "q8": 1,
+        "q9": 1,
+        "q10": 1,
+        "q13": 1,
+        "q14": 1,
+        "q15": 1,
+        "q17": 2,
+        "q18": 1
+      },
+      "score": 1,
+      "levelKey": "一般",
+      "level": "乳腺癌一般风险人群",
+      "riskColor": "#2f9e44",
+      "triggered": [
+        "C"
+      ],
+      "date": "2026-08-24T07:02:39.263Z"
+    },
+    {
+      "id": "submt6r5cfjfezv",
+      "uid": "umt40xuc1l28ss",
+      "name": "测试",
+      "age": "36",
+      "basicInfo": {
+        "age": "36",
+        "height": "162",
+        "weight": "55",
+        "bmi": "21"
+      },
+      "answers": {
+        "q1": 1,
+        "q2": 1,
+        "q3": 1,
+        "q5": 0,
+        "q6": 1,
+        "q7": 1,
+        "q8": 1,
+        "q9": 1,
+        "q10": 1,
+        "q13": 0,
+        "q14": 1,
+        "q15": 1,
+        "q17": 0,
+        "q18": 1
+      },
+      "score": 2,
+      "levelKey": "DE",
+      "level": "乳腺可能有疾病",
+      "riskColor": "#e8590c",
+      "triggered": [
+        "B",
+        "D"
+      ],
+      "date": "2026-08-24T04:44:53.935Z"
+    }
+  ],
+  "users": {
+    "umt40xuc1l28ss": {
+      "uid": "umt40xuc1l28ss",
+      "createdAt": "2026-08-24T04:44:53.935Z",
+      "lastActive": "2026-08-24T07:41:12.750Z",
+      "name": "测试",
+      "age": "36",
+      "basicInfo": {
+        "age": "36",
+        "height": "162",
+        "weight": "55",
+        "bmi": "21"
+      }
+    },
+    "umt85yy9wsgnsv": {
+      "uid": "umt85yy9wsgnsv",
+      "createdAt": "2026-08-25T04:29:11.688Z",
+      "lastActive": "2026-08-25T04:29:11.688Z",
+      "name": "匿名用户",
+      "age": "60",
+      "basicInfo": {
+        "age": "60",
+        "height": "166",
+        "weight": "45",
+        "bmi": "16.3"
+      }
+    },
+    "umt85x7at5gecs": {
+      "uid": "umt85x7at5gecs",
+      "createdAt": "2026-08-25T04:56:36.918Z",
+      "name": "abc",
+      "age": "",
+      "lastActive": "2026-08-25T04:56:36.918Z"
+    }
+  },
+  "settings": {
+    "adminPassword": "admin123",
+    "adminToken": "BCS_ADMIN_TOKEN_2026",
+    "publicLink": "https://rxbex-113-103-5-34.free.pinggy.net/",
+    "adminLink": "https://rxbex-113-103-5-34.free.pinggy.net/admin",
+    "publicNote": "欢迎使用乳腺健康自查：点击链接即可在手机浏览器中使用，无需下载App。如身体出现不适请及时就医。"
+  },
+  "roles": [
+    {
+      "key": "super",
+      "name": "超级管理员",
+      "perms": [
+        "dashboard.read",
+        "questionnaire.read",
+        "questionnaire.write",
+        "hospitals.read",
+        "hospitals.write",
+        "articles.read",
+        "articles.write",
+        "tutorials.read",
+        "tutorials.write",
+        "archive.read",
+        "links.read",
+        "links.write",
+        "accounts.read",
+        "accounts.write",
+        "roles.read",
+        "roles.write",
+        "logs.read"
+      ]
+    },
+    {
+      "key": "editor",
+      "name": "内容编辑",
+      "perms": [
+        "dashboard.read",
+        "questionnaire.read",
+        "questionnaire.write",
+        "hospitals.read",
+        "hospitals.write",
+        "articles.read",
+        "articles.write",
+        "tutorials.read",
+        "tutorials.write",
+        "archive.read",
+        "links.read",
+        "links.write"
+      ]
+    },
+    {
+      "key": "viewer",
+      "name": "只读访客",
+      "perms": [
+        "dashboard.read",
+        "questionnaire.read",
+        "hospitals.read",
+        "articles.read",
+        "tutorials.read",
+        "archive.read",
+        "links.read",
+        "logs.read"
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "id": "accmt86eat61hq3",
+      "username": "admin",
+      "name": "超级管理员",
+      "role": "super",
+      "password": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+      "token": "BCS_ADMIN_TOKEN_2026",
+      "disabled": false,
+      "createdAt": "2026-08-25T04:39:32.158Z"
+    }
+  ],
+  "logs": [
+    {
+      "id": "logmt8fwye21dzw",
+      "time": "2026-08-25T09:05:59.066Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "login",
+      "target": "account",
+      "detail": ""
+    },
+    {
+      "id": "logmt8fwy6tgph4",
+      "time": "2026-08-25T09:05:58.805Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "login",
+      "target": "account",
+      "detail": ""
+    },
+    {
+      "id": "logmt8fwvhsnbwj",
+      "time": "2026-08-25T09:05:55.312Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "login",
+      "target": "account",
+      "detail": ""
+    },
+    {
+      "id": "logmt8fsxd9sg2b",
+      "time": "2026-08-25T09:02:51.117Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "links_update",
+      "target": "settings",
+      "detail": "更新外网链接"
+    },
+    {
+      "id": "logmt8fsx9zrt10",
+      "time": "2026-08-25T09:02:51.000Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "login",
+      "target": "account",
+      "detail": ""
+    },
+    {
+      "id": "logmt8flllx9nzf",
+      "time": "2026-08-25T08:57:09.285Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "links_update",
+      "target": "settings",
+      "detail": "更新外网链接"
+    },
+    {
+      "id": "logmt8flliogwic",
+      "time": "2026-08-25T08:57:09.168Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "login",
+      "target": "account",
+      "detail": ""
+    },
+    {
+      "id": "logmt8etqyubmk6",
+      "time": "2026-08-25T08:35:29.862Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "login",
+      "target": "account",
+      "detail": ""
+    },
+    {
+      "id": "logmt8ehsfbswlq",
+      "time": "2026-08-25T08:26:11.879Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "links_update",
+      "target": "settings",
+      "detail": "更新外网链接"
+    },
+    {
+      "id": "logmt8ehsd3jybs",
+      "time": "2026-08-25T08:26:11.799Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "login",
+      "target": "account",
+      "detail": ""
+    },
+    {
+      "id": "logmt8devvfzgod",
+      "time": "2026-08-25T07:55:56.763Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "links_update",
+      "target": "settings",
+      "detail": "更新外网链接"
+    },
+    {
+      "id": "logmt8devsy5khe",
+      "time": "2026-08-25T07:55:56.674Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "login",
+      "target": "account",
+      "detail": ""
+    },
+    {
+      "id": "logmt8dep66gwin",
+      "time": "2026-08-25T07:55:48.078Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "login",
+      "target": "account",
+      "detail": ""
+    },
+    {
+      "id": "logmt86kfga4e3n",
+      "time": "2026-08-25T04:44:18.106Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "login",
+      "target": "account",
+      "detail": ""
+    },
+    {
+      "id": "logmt86kakqxk64",
+      "time": "2026-08-25T04:44:11.786Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "login",
+      "target": "account",
+      "detail": ""
+    },
+    {
+      "id": "logmt86ffat69zv",
+      "time": "2026-08-25T04:40:24.629Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "login",
+      "target": "account",
+      "detail": ""
+    },
+    {
+      "id": "logmt86f48uvci4",
+      "time": "2026-08-25T04:40:10.302Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "account_delete",
+      "target": "account",
+      "detail": "editor1"
+    },
+    {
+      "id": "logmt86f440pgz7",
+      "time": "2026-08-25T04:40:10.128Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "account_delete",
+      "target": "account",
+      "detail": "viewer1"
+    },
+    {
+      "id": "logmt86f3vwem5n",
+      "time": "2026-08-25T04:40:09.836Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "login",
+      "target": "account",
+      "detail": ""
+    },
+    {
+      "id": "logmt86f3o9bppp",
+      "time": "2026-08-25T04:40:09.561Z",
+      "accountId": "accmt86epa9nm37",
+      "username": "viewer1",
+      "action": "login",
+      "target": "account",
+      "detail": ""
+    },
+    {
+      "id": "logmt86epjj0nmf",
+      "time": "2026-08-25T04:39:51.247Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "account_create",
+      "target": "account",
+      "detail": "editor1 / 角色:editor"
+    },
+    {
+      "id": "logmt86epb1esm6",
+      "time": "2026-08-25T04:39:50.941Z",
+      "accountId": "accmt86epa9nm37",
+      "username": "viewer1",
+      "action": "login",
+      "target": "account",
+      "detail": ""
+    },
+    {
+      "id": "logmt86epaavq90",
+      "time": "2026-08-25T04:39:50.914Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "account_create",
+      "target": "account",
+      "detail": "viewer1 / 角色:viewer"
+    },
+    {
+      "id": "logmt86ep6yva17",
+      "time": "2026-08-25T04:39:50.794Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "login",
+      "target": "account",
+      "detail": ""
+    },
+    {
+      "id": "logmt86eh4tmes4",
+      "time": "2026-08-25T04:39:40.349Z",
+      "accountId": "accmt86eat61hq3",
+      "username": "admin",
+      "action": "login",
+      "target": "account",
+      "detail": ""
+    }
+  ]
+}
