@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>乳腺健康自查 · 管理后台</title>
+  <link rel="stylesheet" href="/admin/admin.css" />
+</head>
+<body>
+  <!-- 登录 -->
+  <div class="login-mask" id="login">
+    <div class="login-card">
+      <div class="login-logo">🩺</div>
+      <h2>乳腺自查管理后台</h2>
+      <p class="login-sub">请输入管理员密码</p>
+      <input id="usr" class="login-input" placeholder="用户名" />
+      <input id="pwd" class="login-input" type="password" placeholder="密码" />
+      <button id="loginBtn" class="login-btn">登 录</button>
+      <p class="login-hint" id="loginHint"></p>
+    </div>
+  </div>
+
+  <!-- 主框架 -->
+  <div class="admin" id="admin" hidden>
+    <aside class="sidebar">
+      <div class="brand">乳腺自查<br><span>管理后台</span></div>
+      <nav class="nav" id="nav"></nav>
+    <div class="side-foot">
+      <div class="side-user" id="sideUser"></div>
+      <a href="/" target="_blank" class="side-link">↗ 打开小程序</a>
+      <button id="logout" class="side-logout">退出登录</button>
+    </div>
+    </aside>
+    <main class="content" id="content"></main>
+  </div>
+
+  <!-- 通用弹层 -->
+  <div class="modal-mask" id="modalMask" hidden>
+    <div class="modal" id="modalBox"></div>
+  </div>
+
+  <script src="/admin/admin.js"></script>
+</body>
+</html>
