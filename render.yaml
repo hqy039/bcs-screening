@@ -1,0 +1,16 @@
+# Render 一键部署配置（免费版）
+# 仓库根目录放这个文件后，用户在 Render 点一下即可部署，无需手写任何配置。
+services:
+  - type: web
+    name: bcs-screening
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # 免费版无持久磁盘，db.json 存在容器文件系统（休眠唤醒后保留，重新部署会重置为种子）。
+      # 如需永久保存数据，可在 Render 升级到付费版并挂载磁盘，再把 DB_PATH 指向挂载路径（如 /data/db.json）。
