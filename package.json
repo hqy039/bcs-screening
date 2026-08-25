@@ -1,0 +1,12 @@
+{
+  "name": "bcs-screening",
+  "version": "1.0.0",
+  "description": "乳腺癌筛查小程序 H5 + 管理后台（零依赖 Node 服务）",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  }
+}
